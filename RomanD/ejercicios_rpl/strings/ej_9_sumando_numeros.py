@@ -16,8 +16,6 @@ def sumar_caracteres_numericos(cadena):
 
             if caracter in ("123456789"):
 
-                suma = suma + int(caracter)
+                suma += int(caracter)
 
         return suma
-
-print(sumar_caracteres_numericos("HOLA"))
