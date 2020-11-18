@@ -17,5 +17,3 @@ def insertar_separadores(cadena, separador, espaciado):
     texto_final = separador.join(lista_de_textos)
 
     return  texto_final
-
-print(insertar_separadores("255255255255",".", 3))
