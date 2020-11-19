@@ -6,24 +6,16 @@ e imprimir los casos en que dicho monto supere los $100.000.
 b. Calcular el monto total para el total del stock."""
 
 lista_de_precios = {"agua": 60, "queso": 400, "leche": 60, "yogurt": 125}
-lista_de_stock = {"agua": 1000, "queso": 2000, "leche": 1500, "yogurt": 500}
+lista_de_stock = {"queso": 2000, "agua": 1000, "leche": 1500, "yogurt": 500}
 
-precio_por_producto = {}
+totales = {}
 
-# for producto in precios:
-#     precio_por_producto[producto] = precios[producto] * stock[producto]
-#
-# for producto, precio in precio_por_producto.items():
-#     if precio > 100000:
-#         print(producto, precio)
-#
-# print("Precio total para todo el stock:", sum(precio_por_producto.values()))
+for alimento in lista_de_precios:
 
+    if alimento in lista_de_stock:
+        totales[alimento] = lista_de_precios[alimento] * lista_de_stock[alimento]
 
-indice_producto = 0
-indice_precios = 1
-indice_stocks = 1
+    if totales[alimento] > 100000:
+        print(alimento, totales[alimento])
 
-for precios, stocks in zip(lista_de_precios, lista_de_stock):
-
-    precio_por_producto[precios] = lista_de_precios[precios] * stocks[precios]
+print(sum(totales.values()))
