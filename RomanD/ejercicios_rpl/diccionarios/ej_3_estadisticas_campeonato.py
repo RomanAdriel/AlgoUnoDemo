@@ -39,10 +39,5 @@ campeonato = {
     "Gimnasia LP": (0, 2, 7, 1, 26)
 }
 
-def calcular_puntos(tabla):
-
-
-def calcular_dif_gol(tabla):
-
 
 
