@@ -1,5 +1,5 @@
 diccionario1 = {'identificador': '',
-                'nombre': 'Juan',
+                'nombre': 'Juan Manuel',
                 'apellido': 'Patiño',
                 'telefono': '12345678'}
 
