@@ -1,2 +1,2 @@
-A = ["morango", "pera", "banana", "ciruela", "damasco", "naranja", "kiwi"]
+A = ["morangooo", "pera", "banana", "ciruela", "damasco", "naranja", "kiwi"]
 print(A[3])
