@@ -6,4 +6,4 @@ lista1 = ['manzana',
           'sandía',
           'frutilla']
 
-print(lista1[2])
+print(lista1[2]+ "jputo")
