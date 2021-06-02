@@ -1,0 +1,5 @@
+b = int(input("Ingrese base del rectángulo  "))
+a = int(input("Ingrese altura del rectángulo  "))
+area = str(b * a)
+perimetro = str((b * 2) + (a * 2))
+print("El área es " + area, "\nEl perímetro es " + perimetro)
