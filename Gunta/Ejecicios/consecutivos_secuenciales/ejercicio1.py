@@ -3,5 +3,5 @@
 # “Número ingresado = ” número.
 
 
-numero_ingresado = 44
+numero_ingresado = input("ingresar un numero :")
 print(numero_ingresado)
