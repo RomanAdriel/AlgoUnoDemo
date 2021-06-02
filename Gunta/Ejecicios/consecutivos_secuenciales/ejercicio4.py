@@ -3,8 +3,10 @@
 
 from math import pi
 
-radio = 4
-superficie = 4 * pi * radio ** 2
+radio = int(input("Ingresar el radio: "))
+superficie = 4 * pi * radio ** 2234
 volumen = 4/3 * pi * radio ** 3
 print("Superficie : ", superficie,"\n"
       "volumen: ", volumen)
+
+
