@@ -5,7 +5,8 @@ n1 = float(input("Ingresar un valor: "))
 n2 = float(input("Ingresar otro valor: "))
 print("""¿Que operacion desea realizar?
 1)Sumar              2)Restar
-3)Multiplicar        4)Dividir """)
+3)Multiplicar        4)Dividir 
+5)Cerrar app""")
 opcion = 0
 while True:
     opcion = int(input("Opcion #: "))
@@ -17,5 +18,9 @@ while True:
         print("La multiplicacion es", n1*n2)
     elif opcion == 4:
         print("La division es", n1/n2)
-    else:
+    elif opcion == 5:
         break
+    else:
+        print("introduzca un valor valido entre 1 y 5")
+        opcion = int(input("Opcion #: "))
+
