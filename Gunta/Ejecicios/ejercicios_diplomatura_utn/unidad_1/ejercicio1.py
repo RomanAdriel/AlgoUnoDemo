@@ -9,7 +9,7 @@ e.pack()
 e.focus_set()
 a = 5
 b = '2'
-c = str(a) + b
+c = a + int(b)
 var = IntVar()
 e.config(textvariable=var)
 var.set(c)
