@@ -6,7 +6,7 @@ opciones = ["Sumar",
             "Dividir"]
 print("Seleccione la operación matemática a realizar"
       + " " + str(opciones[0]) + ", " + str(opciones[1])
-      + ", " + str(opciones[2]) + "ó " + str(opciones[3]))
+      + ", " + str(opciones[2]) + " ó " + str(opciones[3]))
 seleccion = input()
 if seleccion == opciones[0]:
     print(str(numero1+numero2))

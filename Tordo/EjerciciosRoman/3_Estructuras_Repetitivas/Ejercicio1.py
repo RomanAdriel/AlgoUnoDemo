@@ -1,4 +1,3 @@
 i = int(input(""))
-for i in range(1, 20):
-    i = i + 1
+for i in range(i, 21):
     print(i)
