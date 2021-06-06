@@ -9,4 +9,3 @@ hora = segundos // 60 // 60 % 60
 minuto = segundos // 60 % 60
 segundos = segundos % 60
 print(dia, "dias", hora, "horas", minuto, "minutos", segundos, "segundos")
-if dia >
