@@ -3,6 +3,8 @@
 
 a = int(input("Ingrese un valor: "))
 b = int(input("Ingrese otro valor: "))
-d = {a, b, a+b}
-print(d)
-
+d = a + b
+dic = {'a': a,
+       'b': b,
+       'd': d}
+print(dic)
