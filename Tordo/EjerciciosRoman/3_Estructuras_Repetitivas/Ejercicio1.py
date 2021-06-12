@@ -1,3 +1,4 @@
-i = int(input(""))
-for i in range(i, 21):
-    print(i)
+numero = int(input("Ingrese un número: "))
+
+for a in range(numero, numero + 21):
+    print(a)
