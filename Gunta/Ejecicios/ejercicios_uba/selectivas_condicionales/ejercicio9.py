@@ -5,7 +5,7 @@
 
 segundos = int(input("ingrese hora expresada en segundos: "))
 dia = segundos // 86400 % 24
-hora = segundos // 60 // 60 % 60
+hora = segundos // 60 // 60 % 24
 minuto = segundos // 60 % 60
 segundos = segundos % 60
 print(dia, "dias", hora, "horas", minuto, "minutos", segundos, "segundos")
