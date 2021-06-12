@@ -15,6 +15,3 @@ def multi(a, b):
         return multi(a, -b)
     else:
         return a + (multi(a, b + 1))
-
-
-
