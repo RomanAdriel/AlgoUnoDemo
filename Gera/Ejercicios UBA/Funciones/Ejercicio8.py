@@ -35,7 +35,7 @@ def mes_maximo():
     if ganancia_max[indice_mes] != 0:
         comparar_ganancia = calcular_mes_ganancia(ingresar_datos())
         while comparar_ganancia[indice_mes] != 0:
-            valor1 = comparar_ganancias(ganancia_max, comparar_ganancia)
+            ganancia_max = comparar_ganancias(ganancia_max, comparar_ganancia)
             comparar_ganancia = calcular_mes_ganancia(ingresar_datos())
     return ganancia_max
 
