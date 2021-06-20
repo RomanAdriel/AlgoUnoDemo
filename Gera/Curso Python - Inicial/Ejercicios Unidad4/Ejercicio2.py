@@ -3,10 +3,10 @@ def ingreso_valor():
     return numero
 
 def cacluo_factorial(num):
-    numero = num
+    # numero = num
     factorial_por_defecto = 1
     while num > 1:
-        fact_default = factorial_por_defecto * num
+        factorial_por_defecto = factorial_por_defecto * num
         num = num - 1
 
     return factorial_por_defecto
