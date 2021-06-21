@@ -28,9 +28,8 @@ def contar_ninios_por_peso(cantidad_ninios, pesajes):
     cantidad_b = 0
     cantidad_c = 0
     cantidad_d = 0
-    i = 0
 
-    while i <= cantidad_ninios - 1:
+    for i in range(0, cantidad_ninios):
         if float(0.000) < pesajes[i] <= float(10.000):
             cantidad_a += 1
         elif float(10.000) < pesajes[i] <= float(20.000):
@@ -56,11 +55,10 @@ def imprimir_resultados(ninios_pesados):
               "- Entre 10,001 y 20,000 kg. hay", hasta_20, "niños.\n",
               "- Entre 20,001 y 30,000 kg. hay ", hasta_30, "niños.\n",
               "- Más de 30,000 kg. hay ", mas_de_30, " niños.")
-    else:
-        print("No se ingresaron datos")
 
 
 def main():
+
     ninios = ingreso_cantidad_ninios()
     pesajes = generar_ingreso_peso_aleatorio(ninios)
     ninios_pesados = contar_ninios_por_peso(ninios, pesajes)
