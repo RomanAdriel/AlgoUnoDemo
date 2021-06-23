@@ -1,53 +1,63 @@
-"""Dada una serie de datos de la forma mes (1 a 12, no vienen ordenados), cantidad
-recaudada (en pesos) y costo total (en pesos), hacer un algoritmo que calcule e
-imprima cuál fue el mes que arrojó mayor ganancia. La serie termina con mes
-igual a cero. No se deben guardar los datos.
-"""
+"""Se leen 300 datos (usar constantes para poder achicar esta cantidad) que
+representan el peso de la misma cantidad de niños que hay internados en un
+hospital. Se desea confeccionar la siguiente tabla:
+- Entre 0,000 y 10,000 kg. hay ............... niños.
+- Entre 10,001 y 20,000 kg. hay ............. niños.
+- Entre 20,001 y 30,000 kg. hay ............. niños.
+- Más de 30,000 kg. hay .................... niños. """
+
+import random
+
+def ingreso_cantidad_niños():
+    niños = int(input("ingresar la cantidad de niños totales: "))
+    return niños
+
+def generar_ingreso_peso_aleatorio(cantidad_niños):
+
+    peso = []
+    for i in range(0, cantidad_niños):
+        peso.append(random.uniform(float(0.00), float(40.00)))
+
+    return peso
 
 
-def ingresar_datos():
-    recaudacion = int(input("ingrese recaudacion en $"))
-    costo = int(input("ingrese costo en $ "))
-    mes = int(input("ingrese numero de mes: "))
+def contar_niños_por_peso(cantidad_niños, pesajes):
+    cantidad_a = 0
+    cantidad_b = 0
+    cantidad_c = 0
+    cantidad_d = 0
+    i = 0
 
-    return mes, recaudacion, costo
+    while i <= cantidad_niños - 1:
+        if float(0.000) < pesajes[i] <= float(10.000):
+            cantidad_a += 1
+        elif float(10.000) < pesajes[i] <= float(20.000):
+            cantidad_b += 1
+        elif float(20.000) < pesajes[i] <= float(30.000):
+            cantidad_c += 1
+        else:
+            cantidad_d += 1
+        i += 1
 
+    pesajes_ordenados = [cantidad_a, cantidad_b, cantidad_c, cantidad_d]
 
-def calcular_mes_ganancia(datos):
-    mes, recaudacion, costo = datos
-    ganancia = recaudacion - costo
+    return pesajes_ordenados
 
-    return mes, ganancia
-
-
-def comparar_ganancias(dato1, dato2):
-    if dato1[1] > dato2[1]:
-        mayor_ganancia = dato1
+def imprimir_resultados(niños_pesados):
+    if niños_pesados:
+        print("- Entre 0,000 y 10,000 kg. hay", niños_pesados[0] ," niños.\n",
+              "- Entre 10,001 y 20,000 kg. hay", niños_pesados[1], "niños.\n",
+              "- Entre 20,001 y 30,000 kg. hay ", niños_pesados[2], "niños.\n",
+              "- Más de 30,000 kg. hay ", niños_pesados[3], " niños.")
     else:
-        mayor_ganancia = dato2
-    return mayor_ganancia
-
-
-def mes_maximo():
-    valor1 = calcular_mes_ganancia(ingresar_datos())
-    if valor1[0] != 0:
-        valor2 = calcular_mes_ganancia(ingresar_datos())
-        while valor2[0] != 0:
-            valor1 = comparar_ganancias(valor1, valor2)
-            valor2 = calcular_mes_ganancia(ingresar_datos())
-        return valor1
-
-
-def imprimir_resultado(datos_mes_maximo):
-    if datos_mes_maximo:
-        print("El mes", datos_mes_maximo[0], "tuvo una ganancia de $", datos_mes_maximo[1], "y fue el máximo")
-    else:
-        print("Datos insuficientes")
+        print("No se ingresaron datos")
 
 
 def main():
-    test = mes_maximo()
-    imprimir_resultado(test)
+    niños = ingreso_cantidad_niños()
+    pesajes = generar_ingreso_peso_aleatorio(niños)
+    niños_pesados = contar_niños_por_peso(niños, pesajes)
 
+    imprimir_resultados(niños_pesados)
 
-__init__: main()
+__init__ : main()
