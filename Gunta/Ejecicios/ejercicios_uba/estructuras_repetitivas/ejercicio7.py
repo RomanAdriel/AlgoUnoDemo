@@ -30,7 +30,7 @@ def multi2(a, b):
 def mensaje(a, b):
     print(multi2(a, b))
 
-mensaje(5, 5)
+mensaje(0, -5)
 
 
 # def multi3(a, b):
@@ -40,7 +40,7 @@ mensaje(5, 5)
 #         b = b -1
 #     return resultado
 #
-# print(multi3(5, -5))
+# print(multi3(5, 5))
 
 # def persona(nombre):
 #     print("Hola, {}, como estas?.".format(nombre))
