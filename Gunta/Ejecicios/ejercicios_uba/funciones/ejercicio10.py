@@ -31,7 +31,7 @@ def crear_tablas(a, b):  # Funcion que crea las tablas F y C
 
 def imprimir_resultados(a, b):
     for valor_far, valor_cel in zip(a, b):
-        print(round(valor_far), "Fahrenheit son ", round(valor_cel), " grados celsius")
+        print(round(valor_far, 2), "Fahrenheit son ", round(valor_cel, 2), " grados celsius")
 
 
 valores = crear_tablas(0, 200)
