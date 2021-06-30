@@ -24,9 +24,9 @@ def contar_letras_en_telegrama(lista_telegrama):
 
 def imprimir_resultado(letras_contadas):
     if letras_contadas:
-        print("El telegrama contiene ", letras_contadas, "letras")
+        print("El telegrama contiene", letras_contadas, "letras")
     else:
-        print("Hacen falta datos")
+        print("Hacen falta letras, amigo")
 
 
 def main():

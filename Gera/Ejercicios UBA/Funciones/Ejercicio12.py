@@ -20,11 +20,8 @@ def contar_palabras_en_telegrama(lista_caracteres):
     palabras_contadas = 0
     i = 0
     p = i+1
-    while i < len(lista_caracteres)-1:
-        if lista_caracteres[i] in alfabeto and lista_caracteres[p] in alfabeto:
-            i += 1
-            p += 1
-        elif lista_caracteres[i] in alfabeto and lista_caracteres[p] not in alfabeto:
+    for i in range(i, len(lista_caracteres)-1):
+        if lista_caracteres[i] in alfabeto and lista_caracteres[p] not in alfabeto:
             palabras_contadas += 1
             i += 1
             p += 1
@@ -36,7 +33,7 @@ def contar_palabras_en_telegrama(lista_caracteres):
 
 def imprimir_resultado(cantidad_palabras):
     if cantidad_palabras:
-        print("El telegrama ingresado contiene", cantidad_palabras, "palabras")
+        print("El telegrama ingresado contiene", cantidad_palabras, "palabra(s)")
     else:
         print("No se ingresaron datos")
 

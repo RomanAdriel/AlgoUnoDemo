@@ -20,8 +20,9 @@ def pasar_farenheit_a_celsius(grados_farenheit):
 
 
 def imprimir_con_formato(origen, conversion):
-    for i in range(0, len(origen)):
+    for i in range(0, len(origen)): #zipearlo
         print(str(origen[i]) + "°", "Farenheit son ", str(f'{conversion[i]:.2f}') + "° Celsius")
+
 
 
 def main():
