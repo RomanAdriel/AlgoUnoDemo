@@ -4,54 +4,25 @@ aparición, si no estuviera devolver –1. Escribirla sin utilizar funciones com
 count, index, etc.
 """
 
-# def una_funcion(lista, valor):
-#     i = 0
-#     corte = 0
-#     while i <= len(lista)-1 and corte == 0:
-#     #     if lista[i] == valor:
-#     #         return i
-#     #     i += 1
-#     # else:
-#     #     return -1
-#         if lista[i] == valor:
-#             corte += 1
-#         elif lista[i] != valor and i < len(lista)-1:
-#             i += 1
-#         elif lista[i] != valor and i == len(lista)-1:
-#             corte += 1
-#             i = -1
-#
-#     return i
+
 def una_funcion(lista, valor):
 
+    indice = -1
     i = 0
-    corte = 0
-    retorno = False
-
-    while i < len(lista) and corte == 0:
-
+    while i < len(lista):
         if lista[i] == valor:
-            corte += 1
-            retorno = True
-
-        elif i == len(lista) - 1:
-            corte += 1
-            # i = -1
-
-        else:
-
-            i += 1
-
-    return retorno
-
-
+            indice = i
+            i = len(lista)
+        i += 1
+    return indice
 
 
 def main():
 
     listab = [1, 2, 4, 3, 3, 63]
-    valorb = 8
+    valorb = 3
 
     print(una_funcion(listab, valorb))
+
 
 __init__: main()

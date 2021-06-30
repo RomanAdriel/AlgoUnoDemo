@@ -1,63 +1,22 @@
-"""Se leen 300 datos (usar constantes para poder achicar esta cantidad) que
-representan el peso de la misma cantidad de niños que hay internados en un
-hospital. Se desea confeccionar la siguiente tabla:
-- Entre 0,000 y 10,000 kg. hay ............... niños.
-- Entre 10,001 y 20,000 kg. hay ............. niños.
-- Entre 20,001 y 30,000 kg. hay ............. niños.
-- Más de 30,000 kg. hay .................... niños. """
+libros = [["1", "Crimen y Castigo", "Fyodor Dostoyevsky", "2014", "Alianza", "Español", "Tapa blanda", 100],
+          ["2", "How The World Works", "Noam Chomsky", "2018", "Penguin", "Inglés", "Tapa blanda", 50],
+          ["3", "La Revolución Rusa (1891-1924)", "Orlando Figes", "2012", "Edhasa", "Español", "Tapa blanda", 150],
+          ["4", "El Aleph", "Jorge Luis Borges", "2013", "De Bolsillo", "Español", "Tapa blanda", 200],
+          ["5", "Corazón de Perro", "Mihail Bulgakov", "2010", "Gutenberg", "Español", "Tapa dura", 400],
+          ["6", "Aguafuertes Porteñas", "Roberto Arlt", "2008", "Edicol", "Español", "Tapa blanda", 350],
+          ["7", "Madame Bovary", "Gustave Flaubert", "2007", "Tusquets", "Español", "Tapa blanda", 90],
+          ["8", "Leviatán", "Thomas Hobbes", "2009", "Fondo de Cultura Económica", "Español", "Tapa blanda", 65],
+          ["9", "El Lobo Estepario", "Hermann Hesse", "2005", "Losada", "Español", "Tapa blanda", 20],
+          ["10", "Cartero", "Charles Bukowski", "2014", "Octaedro", "Español", "Tapa blanda", 40]]
 
-import random
+claves_biblioteca = ["ID", "Titulo", "Autor", "Edicion", "Editorial", "Idioma", "Encuadernado", "Stock"]
 
-def ingreso_cantidad_niños():
-    niños = int(input("ingresar la cantidad de niños totales: "))
-    return niños
+nueva_list = []
 
-def generar_ingreso_peso_aleatorio(cantidad_niños):
+i = 0
 
-    peso = []
-    for i in range(0, cantidad_niños):
-        peso.append(random.uniform(float(0.00), float(40.00)))
+while i in range(0, len(libros)-1):
+    nueva_list.append(dict(zip(claves_biblioteca, libros[i])))
+    i += 1
 
-    return peso
-
-
-def contar_niños_por_peso(cantidad_niños, pesajes):
-    cantidad_a = 0
-    cantidad_b = 0
-    cantidad_c = 0
-    cantidad_d = 0
-    i = 0
-
-    while i <= cantidad_niños - 1:
-        if float(0.000) < pesajes[i] <= float(10.000):
-            cantidad_a += 1
-        elif float(10.000) < pesajes[i] <= float(20.000):
-            cantidad_b += 1
-        elif float(20.000) < pesajes[i] <= float(30.000):
-            cantidad_c += 1
-        else:
-            cantidad_d += 1
-        i += 1
-
-    pesajes_ordenados = [cantidad_a, cantidad_b, cantidad_c, cantidad_d]
-
-    return pesajes_ordenados
-
-def imprimir_resultados(niños_pesados):
-    if niños_pesados:
-        print("- Entre 0,000 y 10,000 kg. hay", niños_pesados[0] ," niños.\n",
-              "- Entre 10,001 y 20,000 kg. hay", niños_pesados[1], "niños.\n",
-              "- Entre 20,001 y 30,000 kg. hay ", niños_pesados[2], "niños.\n",
-              "- Más de 30,000 kg. hay ", niños_pesados[3], " niños.")
-    else:
-        print("No se ingresaron datos")
-
-
-def main():
-    niños = ingreso_cantidad_niños()
-    pesajes = generar_ingreso_peso_aleatorio(niños)
-    niños_pesados = contar_niños_por_peso(niños, pesajes)
-
-    imprimir_resultados(niños_pesados)
-
-__init__ : main()
+print(nueva_list)
