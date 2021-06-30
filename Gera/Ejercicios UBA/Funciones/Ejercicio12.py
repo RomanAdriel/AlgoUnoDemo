@@ -10,18 +10,14 @@ def ingresar_texto_telegrama():
     return telegrama
 
 
-def convertir_telegrama_en_lista(telegrama):
-    lista_telegrama = list(telegrama)
-    return lista_telegrama
 
-
-def contar_palabras_en_telegrama(lista_caracteres):
+def contar_palabras_en_telegrama(telegrama):
     alfabeto = 'abcdefghijklmnñopqrstuvwxyzáéíóú'
     palabras_contadas = 0
     i = 0
     p = i+1
-    for i in range(i, len(lista_caracteres)-1):
-        if lista_caracteres[i] in alfabeto and lista_caracteres[p] not in alfabeto:
+    for i in range(i, len(telegrama)-1):
+        if telegrama[i] in alfabeto and telegrama[p] not in alfabeto:
             palabras_contadas += 1
             i += 1
             p += 1
@@ -40,7 +36,7 @@ def imprimir_resultado(cantidad_palabras):
 
 def main():
 
-    telegrama = convertir_telegrama_en_lista(ingresar_texto_telegrama())
+    telegrama = ingresar_texto_telegrama()
     palabras_en_telegrama = contar_palabras_en_telegrama(telegrama)
 
     imprimir_resultado(palabras_en_telegrama)

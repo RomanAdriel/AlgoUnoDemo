@@ -8,16 +8,16 @@ def ingresar_texto_telegrama():
     return telegrama
 
 
-def convertir_telegrama_en_lista(telegrama):
-    lista_telegrama = list(telegrama)
-    return lista_telegrama
+# def convertir_telegrama_en_lista(telegrama):
+#     lista_telegrama = list(telegrama)
+#     return lista_telegrama
 
 
-def contar_letras_en_telegrama(lista_telegrama):
+def contar_letras_en_telegrama(telegrama):
     alfabeto = 'abcdefghijklmnñopqrstuvwxyzáéíóú'
     letras_contadas = 0
-    for i in range(0, len(lista_telegrama)):
-        if lista_telegrama[i] in alfabeto:
+    for letra in telegrama:
+        if letra in alfabeto:
             letras_contadas += 1
     return letras_contadas
 
@@ -31,7 +31,7 @@ def imprimir_resultado(letras_contadas):
 
 def main():
 
-    ingreso = convertir_telegrama_en_lista(ingresar_texto_telegrama())
+    ingreso = ingresar_texto_telegrama()
     cantidad_letras = contar_letras_en_telegrama(ingreso)
     imprimir_resultado(cantidad_letras)
 
