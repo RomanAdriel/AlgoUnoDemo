@@ -5,7 +5,6 @@ valor_a = int(input("Ingrese el valor de A:  "))
 valor_b = int(input("Ingrese el valor de B:  "))
 c = 1
 
-
 if valor_b < 0:
     valor_a = 1 / valor_a
     for i in range(0, valor_b, -1):
@@ -19,6 +18,7 @@ else:
         c = c * valor_a
 
 print("El valor de C es: " + str(c))
+
 # A**B
 # 22 = 22
 # 2**(-2)= (1/2)(1/2)

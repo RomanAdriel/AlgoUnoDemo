@@ -1,7 +1,5 @@
 """Dada una serie de números enteros terminada en cero, imprimir los tres mayores. """
 
-"""A mejorar: """
-
 
 numero = int(input("Ingrese valor (0 para terminar): "))
 oro = 0
